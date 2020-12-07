@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chen.chui.tab.bottom.ChTabBottomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ch_tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".demo.ChTabBottomDemoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:text="ChBottom"
+                android:background="#ff563d"
+                android:textColor="@android:color/white"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</org.chen.chui.tab.bottom.ChTabBottomLayout>

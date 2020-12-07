@@ -1,0 +1,6 @@
+include ':chui'
+include ':app'
+rootProject.name = "UI_Library"
+
+include ':ch-library'
+project(':ch-library').projectDir = "../C_Library/clibrary" as File
