@@ -18,7 +18,7 @@ public interface IChTabLayout<Tab extends ViewGroup, D> {
     void inflateInfo(@NonNull List<D> infoList);
 
     interface OnTabSelectedListener<D> {
-        void onTabSelectedChange(int index, @NonNull D prevInfo, @NonNull D nextInfo);
+        void onTabSelectedChange(int index,  D prevInfo, @NonNull D nextInfo);
     }
 
 }

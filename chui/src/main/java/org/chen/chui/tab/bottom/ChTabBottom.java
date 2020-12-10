@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -46,7 +47,7 @@ public class ChTabBottom extends RelativeLayout implements IChTab<ChTabBottomInf
 
 
     @Override
-    public void setChTabInfo(@NonNull ChTabBottomInfo<?> data) {
+    public void setChTabInfo(@NonNull ChTabBottomInfo data) {
         this.tabInfo = data;
         inflateInfo(false, true);
     }
@@ -64,6 +65,7 @@ public class ChTabBottom extends RelativeLayout implements IChTab<ChTabBottomInf
                 }
             }
             if (selected) {
+                Log.d("chen", "inflateInfo: ");
                 tabIconView.setText(TextUtils.isEmpty(tabInfo.selectedIconName) ? tabInfo.defaultIconName : tabInfo.selectedIconName);
                 tabIconView.setTextColor(getTextColor(tabInfo.tintColor));
                 tabNameView.setTextColor(getTextColor(tabInfo.tintColor));
@@ -97,11 +99,16 @@ public class ChTabBottom extends RelativeLayout implements IChTab<ChTabBottomInf
     }
 
     @Override
-    public void onTabSelectedChange(int index, @NonNull ChTabBottomInfo<?> prevInfo, @NonNull ChTabBottomInfo<?> nextInfo) {
+    public void onTabSelectedChange(int index,  ChTabBottomInfo<?> prevInfo, @NonNull ChTabBottomInfo<?> nextInfo) {
         //重复选额
+        if(prevInfo == null && tabInfo == nextInfo){
+            inflateInfo(true,false);
+        }
+
         if(prevInfo != tabInfo && nextInfo!= tabInfo || prevInfo == nextInfo){
             return;
         }
+        Log.d("chen", "onTabSelectedChange: ");
         if(prevInfo == tabInfo){
             inflateInfo(false,false);
         }else {

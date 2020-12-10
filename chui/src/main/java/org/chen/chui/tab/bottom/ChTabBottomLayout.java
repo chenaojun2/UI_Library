@@ -3,6 +3,7 @@ package org.chen.chui.tab.bottom;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -82,7 +83,6 @@ public class ChTabBottomLayout extends FrameLayout implements IChTabLayout<ChTab
         for (int i = getChildCount() - 1; i > 0; i++) {
             removeViewAt(i);
         }
-        selectedInfo = null;
         addBackground();
 
         Iterator<OnTabSelectedListener<ChTabBottomInfo<?>>> iterator = tabSelectedListeners.iterator();
@@ -109,6 +109,7 @@ public class ChTabBottomLayout extends FrameLayout implements IChTabLayout<ChTab
             tabBottom.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Log.d("chen", "onClick: ");
                     onSelected(info);
                 }
             });
@@ -133,10 +134,11 @@ public class ChTabBottomLayout extends FrameLayout implements IChTabLayout<ChTab
     }
 
     private void onSelected(@NonNull ChTabBottomInfo<?> nextInfo){
-        this.selectedInfo = nextInfo;
         for(OnTabSelectedListener<ChTabBottomInfo<?>> listener : tabSelectedListeners){
+            Log.d("chen", "onSelected: ");
             listener.onTabSelectedChange(infoList.indexOf(nextInfo),selectedInfo,nextInfo);
         }
+        this.selectedInfo = nextInfo;
     }
 
     private void addBackground() {
