@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.ui_library.R
 import com.example.ui_library.demo.ChTabBottomDemoActivity
 import com.example.ui_library.demo.ChTabTopDemoActivity
+import com.example.ui_library.demo.ChRefreshDemoActivity
 
 /**
  *
@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
             }
             R.id.tv_tob_top->{
                 startActivity(Intent(this, ChTabTopDemoActivity::class.java))
+            }
+            R.id.tv_refresh->{
+                startActivity(Intent(this, ChRefreshDemoActivity::class.java))
             }
         }
     }
