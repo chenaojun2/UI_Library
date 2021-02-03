@@ -40,8 +40,7 @@ class ChRefreshDemoActivity : AppCompatActivity() {
         initRecycleView()
     }
 
-    var myDataset =
-            arrayOf("Refresh", "Refresh", "Refresh", "Refresh", "Refresh", "Refresh", "Refresh")
+    var myDataset = arrayOf("Refresh", "Refresh", "Refresh", "Refresh", "Refresh", "Refresh", "Refresh")
 
     private fun initRecycleView() {
         recyclerView = findViewById<View>(R.id.recycleview) as RecyclerView
