@@ -1,4 +1,4 @@
-package org.chen.chui.banner.core;
+package org.chen.chui.banner.indicator;
 
 import android.view.View;
 

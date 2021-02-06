@@ -30,14 +30,6 @@ public class ChViewPager extends ViewPager {
         }
     };
 
-    public ChViewPager(@NonNull Context context) {
-        super(context);
-    }
-
-    public ChViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-    }
-
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
@@ -82,8 +74,26 @@ public class ChViewPager extends ViewPager {
         isLayout = true;
     }
 
+    public ChViewPager(@NonNull Context context) {
+        super(context);
+    }
+
+    public ChViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+    }
+
     public void stop() {
         mHandler.removeCallbacksAndMessages(null);
+    }
+
+    public void setScrollerDuration(int duration) {
+        try {
+            Field scrollerFiled = ViewPager.class.getDeclaredField("mScroller");
+            scrollerFiled.setAccessible(true);
+            scrollerFiled.set(this,new ChBannerScroller(getContext(),duration));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void setIntervalTime(int mIntervalTime) {
@@ -115,8 +125,8 @@ public class ChViewPager extends ViewPager {
         }
         nextPosition = getCurrentItem() + 1;
         if (nextPosition >= getAdapter().getCount()) {
-            //获取第一个item索引
-            //nextPosition = getAdapter().get
+//            获取第一个item索引
+            nextPosition = ((ChBannerAdapter)getAdapter()).getFirstItem();
         }
         setCurrentItem(nextPosition, true);
         return nextPosition;

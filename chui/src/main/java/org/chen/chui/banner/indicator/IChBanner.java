@@ -6,7 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 
 import org.chen.chui.banner.core.ChBannerAdapter;
 import org.chen.chui.banner.core.ChBannerMo;
-import org.chen.chui.banner.core.ChIndicator;
 import org.chen.chui.banner.core.IBindAdapter;
 
 import java.util.List;
@@ -17,7 +16,7 @@ public interface IChBanner {
 
     void setBannerData(@NonNull List<? extends ChBannerMo> models);
 
-    void setChIndicator(ChIndicator<?> hiIndicator);
+    void setChIndicator(ChIndicator<?> chIndicator);
 
     void setAutoPlay(boolean autoPlay);
 
