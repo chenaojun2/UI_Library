@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UI_Library">
-        <activity android:name=".demo.ChBannerDemoActivity"></activity>
+        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".demo.ChBannerDemoActivity" />
         <activity android:name=".demo.ChRefreshDemoActivity" />
         <activity android:name=".demo.ChTabTopDemoActivity" />
         <activity android:name=".demo.ChTabBottomDemoActivity" />

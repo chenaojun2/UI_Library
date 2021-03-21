@@ -1,16 +1,14 @@
 package com.example.ui_library
 
-import android.app.Application
 
-import org.chen.cibrary.log.ChConsolePrinter
-import org.chen.cibrary.log.ChLogConfig
-import org.chen.cibrary.log.ChLogManger
-import org.chen.cibrary.log.ChLogPrinter
+import android.app.Application
+import com.example.ui_library.util.ActivityManager
 
 class MyApplication :Application(){
 
     override fun onCreate() {
         super.onCreate()
+        ActivityManager.instance.init(this)
     }
 
 }
